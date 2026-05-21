@@ -45,6 +45,66 @@ User Request → FastAPI App → Prometheus Metrics → Grafana Dashboard
 
 (Add your screenshots here later)
 
+---
+
+## 🏗️ Architecture Flow
+
+```text
+User Request
+     ↓
+FastAPI Application
+     ↓
+Prometheus Metrics Endpoint
+     ↓
+Prometheus Scraping
+     ↓
+Grafana Dashboard Visualization
+     ↓
+Kubernetes Pod Monitoring
+```
+
+---
+
+## ⚙️ API Endpoints
+
+| Endpoint | Purpose |
+|----------|----------|
+| `/` | Home endpoint |
+| `/metrics` | Prometheus metrics |
+| `/health` | Health check |
+| `/cpu` | CPU load simulation |
+| `/simulate-failure` | Simulate pod failure |
+
+---
+
+## 📁 Project Structure
+
+```text
+AutoOps/
+│
+├── app/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── deployment.yaml
+│
+├── Dockerfile
+├── metrics-patch.yaml
+├── metrics-server-full.yaml
+└── README.md
+```
+
+---
+
+## 🚀 Future Improvements
+
+- Add CI/CD pipeline using GitHub Actions
+- Add alerting with Alertmanager
+- Add Slack/Email notifications
+- Add Helm charts
+- Deploy on cloud Kubernetes cluster
+
+---
+
 ## Author
 
 Adarsh Sharma
