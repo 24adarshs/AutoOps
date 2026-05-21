@@ -26,6 +26,15 @@ A complete DevOps monitoring project built using:
 - Prometheus
 - Grafana
 
+## Architecture Flow
+
+User Request → FastAPI App → Prometheus Metrics → Grafana Dashboard
+
+- FastAPI application exposes metrics
+- Prometheus scrapes metrics
+- Grafana visualizes monitoring dashboards
+- Kubernetes manages pods and auto-restarts
+
 ## Monitoring Dashboards
 
 - Node Exporter Full Dashboard
