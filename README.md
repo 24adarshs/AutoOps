@@ -105,6 +105,54 @@ AutoOps/
 
 ---
 
+---
+
+## ▶️ How To Run The Project
+
+### Clone Repository
+
+```bash
+git clone https://github.com/24adarshs/AutoOps.git
+cd AutoOps
+```
+
+### Build Docker Image
+
+```bash
+docker build -t autoops:v3 .
+```
+
+### Apply Kubernetes Deployment
+
+```bash
+kubectl apply -f app/deployment.yaml
+```
+
+### Start Monitoring Stack
+
+```bash
+kubectl apply -f metrics-server-full.yaml
+kubectl apply -f metrics-patch.yaml
+```
+
+### Check Running Pods
+
+```bash
+kubectl get pods
+```
+
+### Access Grafana
+
+```text
+http://localhost:3001
+```
+
+### Access FastAPI App
+
+```text
+http://localhost:8001
+```
+
 ## Author
 
 Adarsh Sharma
